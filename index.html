@@ -14,17 +14,23 @@
 
 <body>
     <div class="wrapper">
+        <div class="positionBar">
+            positionBar
+        </div>
         <form id="post">
-
             <label for="title">Title</label>
             <input type="text" name="title" id="title" value="Go to the beach" required>
-
             <label for="body">Body</label>
             <textarea id="body" name="body">Soak up the sun and swim in the ocean.</textarea>
-
             <input type="hidden" name="userId" value="1">
-
-            <button id="formValideateBtn" type="button">Submit</button>
+            <button id="formValideateBtn" type="button">Next</button>
+            <div class="imgChose">
+                choose img
+            </div>
+            <div class="imgContainer">
+                <img src="./assets/tshirt_front.jpg" alt="thisrt">
+                <img src="./assets/tshirt_rear.jpg" alt="thisrt">
+            </div>
 
         </form>
     </div>
