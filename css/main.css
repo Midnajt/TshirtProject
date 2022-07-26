@@ -50,4 +50,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.wrapper {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px";
+          box-shadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px";
+  border-radius: 4px;
+}
+
+.wrapper form * {
+  margin: 1rem;
+}
 /*# sourceMappingURL=main.css.map */

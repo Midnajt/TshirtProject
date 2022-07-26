@@ -14,9 +14,20 @@
 
 <body>
     <div class="wrapper">
-        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, labore animi?</h1>
+        <form id="post">
+
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" value="Go to the beach" required>
+
+            <label for="body">Body</label>
+            <textarea id="body" name="body">Soak up the sun and swim in the ocean.</textarea>
+
+            <input type="hidden" name="userId" value="1">
+
+            <button id="formValideateBtn" type="button">Submit</button>
+
+        </form>
     </div>
-    <script src='./src/lightbox-plus-jquery.js'></script>
     <script src="./js/Controller.js" type="module"></script>
 </body>
 
