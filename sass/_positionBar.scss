@@ -1,0 +1,33 @@
+.positionBar {
+    position: relative;
+    margin: 1rem 0 2rem 0;
+    box-shadow: 0 0 5px $orange;
+    border: 1px solid $orange;
+    border-radius: $border-radius;
+
+    &__item {
+        position: absolute;
+        left: 20%;
+        transform: translate(-.7rem, -.7rem);
+        padding: .7rem;
+        background-color: $orange;
+        box-shadow: 0 0 5px $orange;
+        border-radius: 1rem;
+
+        &--green {
+            background-color: $green;
+            box-shadow: 0 0 5px $green;
+        }
+
+        &:nth-child(2){
+            left: 40%;
+        }
+
+        &:nth-child(3){
+            left: 60%;
+        }
+        &:nth-child(4){
+            left: 80%;
+        }
+    }
+}

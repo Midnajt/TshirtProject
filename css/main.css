@@ -20,7 +20,6 @@ time, mark, audio, video {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Montserrat", "arial", sans-serif;
-  background-color: #f5f5f5;
 }
 
 article, aside, details, figcaption, figure,
@@ -51,6 +50,45 @@ table {
   border-spacing: 0;
 }
 
+.positionBar {
+  position: relative;
+  margin: 1rem 0 2rem 0;
+  -webkit-box-shadow: 0 0 5px #fd7e14;
+          box-shadow: 0 0 5px #fd7e14;
+  border: 1px solid #fd7e14;
+  border-radius: 4px;
+}
+
+.positionBar__item {
+  position: absolute;
+  left: 20%;
+  -webkit-transform: translate(-0.7rem, -0.7rem);
+          transform: translate(-0.7rem, -0.7rem);
+  padding: .7rem;
+  background-color: #fd7e14;
+  -webkit-box-shadow: 0 0 5px #fd7e14;
+          box-shadow: 0 0 5px #fd7e14;
+  border-radius: 1rem;
+}
+
+.positionBar__item--green {
+  background-color: #28a745;
+  -webkit-box-shadow: 0 0 5px #28a745;
+          box-shadow: 0 0 5px #28a745;
+}
+
+.positionBar__item:nth-child(2) {
+  left: 40%;
+}
+
+.positionBar__item:nth-child(3) {
+  left: 60%;
+}
+
+.positionBar__item:nth-child(4) {
+  left: 80%;
+}
+
 .wrapper {
   margin: 1rem;
   padding: 1rem;
@@ -64,9 +102,10 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px";
-          box-shadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px";
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 4px;
+  background-color: white;
 }
 
 .wrapper form * {

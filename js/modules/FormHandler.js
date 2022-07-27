@@ -1,21 +1,23 @@
 export class FormHandler {
   #formBtn = document.querySelector("#formValideateBtn");
+  #form = document.querySelector("#post");
 
   init() {
-    this.#formBtn.addEventListener("click", this.formHandler);
+    this.#form.addEventListener("submit", (event) => this.formHandler(event));
   }
 
-  formHandler() {
+  formHandler(e) {
+    e.preventDefault();
     // ? https://gomakethings.com/working-with-forms-with-vanilla-javascript/
     // ? http://kursjs.pl/kurs/formularze/formularze-walidacja
-    let form = document.querySelector("#post");
+    // let form = document.querySelector("#post");
 
     // Get all field data from the form
     // returns a FormData object
-    let data = new FormData(form);
+    let data = new FormData(this.#form);
 
-    console.log(form);
     console.log(data);
+    console.log(data.keys);
 
     // for (let entry of data) {
     //   console.log(entry);

@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'reset';
+@import 'positionBar';
 
 .wrapper {
     margin:1rem;
@@ -10,6 +11,7 @@
         flex-direction: column;
         box-shadow: $box-shadow;
         border-radius: $border-radius;
+        background-color: white;
 
         * {
             margin: 1rem;

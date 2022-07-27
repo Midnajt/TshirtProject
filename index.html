@@ -7,27 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tshirt Project">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Dom Weselny Agata</title>
+    <title>Tshirt project</title>
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23007bff%22></rect><path fill=%22%23fff%22 d=%22M33.82 36.78L24.58 36.78L24.58 66.86Q24.30 66.97 23.71 67.11Q23.12 67.25 22.50 67.25L22.50 67.25Q20.04 67.25 20.04 65.18L20.04 65.18L20.04 36.78L9.57 36.78Q9.40 36.50 9.23 36.03Q9.06 35.55 9.06 34.94L9.06 34.94Q9.06 33.98 9.51 33.45Q9.96 32.92 10.80 32.92L10.80 32.92L35.05 32.92Q35.22 33.20 35.38 33.68Q35.55 34.15 35.55 34.71L35.55 34.71Q35.55 35.66 35.10 36.22Q34.66 36.78 33.82 36.78L33.82 36.78ZM59.41 60.08L59.41 60.08Q59.41 63.66 56.78 65.68Q54.14 67.70 49.16 67.70L49.16 67.70Q47.03 67.70 45.24 67.33Q43.45 66.97 42.19 66.38Q40.93 65.79 40.23 65.04Q39.53 64.28 39.53 63.50L39.53 63.50Q39.53 62.82 39.89 62.21Q40.26 61.59 40.98 61.14L40.98 61.14Q42.50 62.26 44.51 63.13Q46.53 64 49.10 64L49.10 64Q54.93 64 54.93 60.08L54.93 60.08Q54.93 56.89 51.06 55.94L51.06 55.94L46.42 54.70Q43 53.81 41.43 52.10Q39.86 50.39 39.86 47.70L39.86 47.70Q39.86 46.25 40.45 44.90Q41.04 43.56 42.27 42.55Q43.50 41.54 45.32 40.96Q47.14 40.37 49.61 40.37L49.61 40.37Q53.53 40.37 55.94 41.52Q58.34 42.66 58.34 44.18L58.34 44.18Q58.34 44.90 57.98 45.46Q57.62 46.02 57 46.30L57 46.30Q55.99 45.63 54.14 44.85Q52.30 44.06 49.78 44.06L49.78 44.06Q47.26 44.06 45.77 45.02Q44.29 45.97 44.29 47.70L44.29 47.70Q44.29 48.99 45.13 49.89Q45.97 50.78 47.93 51.23L47.93 51.23L51.79 52.18Q55.60 53.14 57.50 55.01Q59.41 56.89 59.41 60.08ZM77.22 54.82L71.56 54.82L71.56 66.86Q71.22 66.97 70.66 67.11Q70.10 67.25 69.43 67.25L69.43 67.25Q66.97 67.25 66.97 65.18L66.97 65.18L66.97 35.38Q66.97 34.49 67.42 34.01Q67.86 33.54 68.82 33.26L68.82 33.26Q70.44 32.75 72.76 32.53Q75.09 32.30 77.27 32.30L77.27 32.30Q84.38 32.30 87.66 35.30Q90.94 38.30 90.94 43.39L90.94 43.39Q90.94 48.60 87.58 51.71Q84.22 54.82 77.22 54.82L77.22 54.82ZM71.50 51.01L76.94 51.01Q81.42 51.01 83.88 49.16Q86.34 47.31 86.34 43.45L86.34 43.45Q86.34 39.64 83.96 37.88Q81.58 36.11 77.16 36.11L77.16 36.11Q75.65 36.11 74.16 36.25Q72.68 36.39 71.50 36.62L71.50 36.62L71.50 51.01Z%22></path></svg>" />
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23007bff%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2267%22>👕</text></svg>" />
 </head>
 
 <body>
     <div class="wrapper">
         <div class="positionBar">
-            positionBar
+            <span class="positionBar__item"></span><span class="positionBar__item"></span><span
+                class="positionBar__item positionBar__item--green"></span><span class="positionBar__item"></span>
         </div>
-        <form id="post">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" value="Go to the beach" required>
-            <label for="body">Body</label>
+        <form id="post" class="form">
+            <div class="form__row">
+                <p style="display:inline-block">Wybierz miejsce nadruku:</p>
+                <label for="place">Przód</label>
+                <input type="radio" value="front" name="place" required>
+                <label for="place">Tył</label>
+                <input type="radio" value="rear" name="place" required>
+            </div>
+            <div class="form_row">
+                <img data-shirt-img src="https://picsum.photos/200" alt="loremPicsumImg">
+                <button type="button" class="imgBtn" data-btn-value="next">Następne</button>
+                <button type="button" class="imgBtn" data-btn-value="previous">Poprzednie</button>
+                <div style="display:inline-block;padding:1rem;margin:1rem;border:1px solid magenta" img-testing></div>
+            </div>
+
+            <!-- <label for="body">Body</label>
             <textarea id="body" name="body">Soak up the sun and swim in the ocean.</textarea>
-            <input type="hidden" name="userId" value="1">
-            <button id="formValideateBtn" type="button">Next</button>
+            <input type="hidden" name="userId" value="1"> -->
+            <button id="formValideateBtn">Next</button>
             <div class="imgChose">
                 choose img
             </div>
-            <div class="imgContainer">
+            <div class="imgContainer" style="display:none">
                 <img src="./assets/tshirt_front.jpg" alt="thisrt">
                 <img src="./assets/tshirt_rear.jpg" alt="thisrt">
             </div>
