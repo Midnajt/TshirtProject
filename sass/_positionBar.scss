@@ -7,7 +7,7 @@
 
     &__item {
         position: absolute;
-        left: 20%;
+        left: 25%;
         transform: translate(-.7rem, -.7rem);
         padding: .7rem;
         background-color: $orange;
@@ -20,14 +20,11 @@
         }
 
         &:nth-child(2){
-            left: 40%;
+            left: 50%;
         }
 
         &:nth-child(3){
-            left: 60%;
-        }
-        &:nth-child(4){
-            left: 80%;
+            left: 75%;
         }
     }
 }

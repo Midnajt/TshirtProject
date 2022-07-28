@@ -15,34 +15,40 @@
 <body>
     <div class="wrapper">
         <div class="positionBar">
-            <span class="positionBar__item"></span><span class="positionBar__item"></span><span
-                class="positionBar__item positionBar__item--green"></span><span class="positionBar__item"></span>
+            <span class="positionBar__item positionBar__item--green"></span>
+            <span class="positionBar__item"></span>
+            <span class="positionBar__item"></span>
         </div>
         <form id="post" class="form">
-            <div class="form__row">
-                <p style="display:inline-block">Wybierz miejsce nadruku:</p>
-                <label for="place">Przód</label>
-                <input type="radio" value="front" name="place" required>
-                <label for="place">Tył</label>
-                <input type="radio" value="rear" name="place" required>
-            </div>
-            <div class="form_row">
-                <img crossorigin="anonymous" data-shirt-img src="https://picsum.photos/200" alt="loremPicsumImg">
-                <button type="button" class="imgBtn" data-btn-value="next">Następne</button>
-                <button type="button" class="imgBtn" data-btn-value="previous">Poprzednie</button>
-            </div>
+            <section class="form__section">
+                <div class="form__row">
+                    <p class="form__title">Wybierz miejsce nadruku:</p>
+                    <div class="form__items">
+                        <label for="place">Przód</label>
+                        <input type="radio" value="front" name="place" data-side-input required checked>
+                        <label for="place">Tył</label>
+                        <input type="radio" value="rear" name="place" data-side-input required>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <p class="form__title">Wybierz zdjęcie</p>
+                    <div class="form__items">
+                        <button type="button" class="imgBtn btn" data-btn-value="previous">Poprzednie</button>
+                        <img crossorigin="anonymous" data-shirt-img src="https://picsum.photos/200"
+                            alt="loremPicsumImg">
+                        <button type="button" class="imgBtn btn" data-btn-value="next">Następne</button>
+                    </div>
+                </div>
 
-            <!-- <label for="body">Body</label>
-            <textarea id="body" name="body">Soak up the sun and swim in the ocean.</textarea>
-            <input type="hidden" name="userId" value="1"> -->
-            <button id="formValideateBtn">Next</button>
-            <div class="imgChose">
-                choose img
-            </div>
-            <div class="imgContainer" style="display:none">
-                <img src="./assets/tshirt_front.jpg" alt="thisrt">
-                <img src="./assets/tshirt_rear.jpg" alt="thisrt">
-            </div>
+                <!-- <label for="body">Body</label>
+                <textarea id="body" name="body">Soak up the sun and swim in the ocean.</textarea>
+                <input type="hidden" name="userId" value="1"> -->
+                <button id="formValideateBtn" class="btn btn--next">Do koszyka</button>
+                <div class="imgContainer" style="display:none">
+                    <img src="./assets/tshirt_front.jpg" alt="thisrt">
+                    <img src="./assets/tshirt_rear.jpg" alt="thisrt">
+                </div>
+            </section>
 
         </form>
     </div>
