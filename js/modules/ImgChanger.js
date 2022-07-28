@@ -21,18 +21,18 @@ export class ImgChanger {
         console.log("!previous");
         return;
       }
-      // const dataImage = localStorage.getItem("imgData"); // nie działa, broken state
-      // img.src = "data:image/png;base64," + dataImage; // nie działa, broken state
+      const dataImage = localStorage.getItem("imgData"); // nie działa, broken state
+      img.src = "data:image/png;base64," + dataImage; // nie działa, broken state
 
       this.#scrollBack = !this.#scrollBack;
       console.log("previous");
     } else {
       this.#btnPrevious.classList.remove("btn--inactive");
 
-      // const imgData = this.getBase64Image(img);
-      // this.getBase64Image(img);
-      // localStorage.setItem("currentImgSrc", imgData);
-      // img.src = "https://picsum.photos/200";
+      const imgData = this.getBase64Image(img);
+      this.getBase64Image(img);
+      localStorage.setItem("currentImgSrc", imgData);
+      img.src = "https://picsum.photos/200";
       this.#scrollBack = true;
       console.log("next");
     }

@@ -3,7 +3,8 @@ export class FormHandler {
   #form = document.querySelector("#post");
 
   init() {
-    this.#form.addEventListener("submit", (event) => this.formHandler(event));
+    // this.#form.addEventListener("submit", (event) => this.formHandler(event));
+    // TODO zmien type  btn na submit
   }
 
   formHandler(e) {

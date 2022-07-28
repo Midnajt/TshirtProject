@@ -20,7 +20,7 @@
             <span class="positionBar__item"></span>
         </div>
         <form id="post" class="form">
-            <section class="form__section">
+            <section class="form__section form__section--active" data-section="0">
                 <div class="form__row">
                     <p class="form__title">Wybierz miejsce nadruku:</p>
                     <div class="form__items">
@@ -43,13 +43,19 @@
                 <!-- <label for="body">Body</label>
                 <textarea id="body" name="body">Soak up the sun and swim in the ocean.</textarea>
                 <input type="hidden" name="userId" value="1"> -->
-                <button id="formValideateBtn" class="btn btn--next">Do koszyka</button>
                 <div class="imgContainer" style="display:none">
                     <img src="./assets/tshirt_front.jpg" alt="thisrt">
                     <img src="./assets/tshirt_rear.jpg" alt="thisrt">
                 </div>
+                <button id="nextSectionBtn" type="button" class="btn btn--next">Do koszyka</button>
+            </section>
+            <section class="form__section" data-section="1">
+                data-section=1
             </section>
 
+            <section class="form__section" data-section="2">
+                data-section=2
+            </section>
         </form>
     </div>
     <script src="./js/Controller.js" type="module"></script>
