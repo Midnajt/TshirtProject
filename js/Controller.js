@@ -1,14 +1,14 @@
 import { FormHandler } from "./modules/FormHandler.js";
-import { EventsHandler } from "./modules/EventsHandler.js";
+import { Navigation } from "./modules/Navigation.js";
 import { ImgChanger } from "./modules/ImgChanger.js";
 
 class Controller {
   #formHandler = new FormHandler();
-  #eventsHandler = new EventsHandler();
+  #navigation = new Navigation();
   #imgChanger = new ImgChanger();
   constructor() {
     this.#formHandler.init();
-    this.#eventsHandler.init();
+    this.#navigation.init();
     this.#imgChanger.init();
   }
 }

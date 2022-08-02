@@ -32,7 +32,7 @@ export class ImgChanger {
       const imgData = this.getBase64Image(img);
       this.getBase64Image(img);
       localStorage.setItem("currentImgSrc", imgData);
-      img.src = "https://picsum.photos/200";
+      img.src = "https://picsum.photos/200"; // zmiana zdjęć nie działa
       this.#scrollBack = true;
       console.log("next");
     }

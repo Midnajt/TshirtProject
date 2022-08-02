@@ -3,16 +3,20 @@
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     background-color: white;
+    border: 2px solid green;
 
     &__section {
-        display: flex;
+        display: none;
         flex-direction: column;
         opacity: 0;
         z-index: -1;
+        border: 1px solid magenta;
 
         &--active {
+            display: flex;
             opacity:1;
             z-index: 0;
+            border: 1px solid cyan;
         }
 
         * {
