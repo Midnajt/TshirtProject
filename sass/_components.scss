@@ -65,3 +65,13 @@
         justify-content: flex-start;
     }
 }
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    &__img {
+        width: 200px;
+    }
+}

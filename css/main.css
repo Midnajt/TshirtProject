@@ -232,7 +232,22 @@ table {
           justify-content: flex-start;
 }
 
+.logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.logoContainer__img {
+  width: 200px;
+}
+
 .wrapper {
+  position: relative;
   margin: 1rem;
   padding: 1rem;
 }
