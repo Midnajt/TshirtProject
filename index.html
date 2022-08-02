@@ -58,23 +58,23 @@
                     <p class="form__title">Imię:</p>
                     <div class="form__items">
                         <label class="label label--hide" for="name">Imię</label>
-                        <input class="input" name="name" id="name" required>
+                        <input class="input" name="name" id="name" required value="Marcin">
                     </div>
                 </div>
                 <div class="form__row">
                     <p class="form__title">Nazwisko:</p>
                     <div class="form__items">
                         <label class="label label--hide" for="lastName">Nazwisko</label>
-                        <input class="input" name="lastName" id="lastName" required>
+                        <input class="input" name="lastName" id="lastName" required value="Nazwisko">
                     </div>
                 </div>
                 <div class="form__row">
                     <p class="form__title">Ulica i numer budynku / mieszkania:</p>
                     <div class="form__items">
                         <label class="label label--hide" for="street">Ulica</label>
-                        <input class="input" name="street" id="street" required>
+                        <input class="input" name="street" id="street" required value="Sezamkowa">
                         <label class="label label--hide" for="streetNumber">Numer budynku</label>
-                        <input class="input input--short" name="streetNumber" id="streetNumber" required>
+                        <input class="input input--short" name="streetNumber" id="streetNumber" required value="13">
                         /
                         <label class="label label--hide" for="homeNumber">Numer mieszkania</label>
                         <input class="input input--short" name="homeNumber" id="homeNumber" value="-">
@@ -84,10 +84,10 @@
                     <p class="form__title">Kod pocztowy oraz miasto:</p>
                     <div class="form__items">
                         <label class="label label--hide" for="zipCode">Kod pocztowy</label>
-                        <input class="input" name="zipCode" id="zipCode" required>
+                        <input class="input" name="zipCode" id="zipCode" required value="13-131">
                         /
                         <label class="label label--hide" for="city">Miasto</label>
-                        <input class="input" name="city" id="city" required>
+                        <input class="input" name="city" id="city" required value="Asgard">
                     </div>
                 </div>
                 <div class="form__row">
@@ -101,14 +101,15 @@
                     <p class="form__title">Adres mailowy:</p>
                     <div class="form__items">
                         <label class="label label--hide" for="email">Email</label>
-                        <input class="input" type="email" name="email" id="email" required>
+                        <input class="input" type="email" name="email" id="email" required value="adres@gmail.com">
                     </div>
                 </div>
-                <button id="nextSectionBtn" type="submit" class="btn btn--next">Złóż zamówienie</button>
+                <button id="nextSectionBtn" type="submit" data-confirm-data class="btn btn--next">Złóż
+                    zamówienie (działa po drugim klknięciu?)</button>
             </section>
 
             <section class="form__section" data-section="2">
-                data-section=2
+                Potwierdzenie zamowienia
             </section>
         </form>
         <div class="logoContainer">

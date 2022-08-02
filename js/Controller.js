@@ -4,8 +4,8 @@ import { ImgChanger } from "./modules/ImgChanger.js";
 import { EventsHandler } from "./modules/EventsHandler.js";
 
 class Controller {
-  #formHandler = new FormHandler();
   #navigation = new Navigation();
+  #formHandler = new FormHandler();
   #imgChanger = new ImgChanger();
   #eventsHandler = new EventsHandler();
   constructor() {

@@ -47,7 +47,6 @@ export class ImgChanger {
     ctx.drawImage(img, 0, 0);
 
     const dataURL = canvas.toDataURL("image/png");
-    // console.log(dataURL);
 
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
   }

@@ -3,7 +3,7 @@ export class Navigation {
   #currentSection = 0;
   #sections = [...document.querySelectorAll("[data-section]")];
   #navBars = [...document.querySelectorAll(".positionBar__item")];
-  // #inputs = [...document.querySelectorAll("[data-side-input]")]; nie pamiętam do czego do było potrzebne
+
   init() {
     this.addEvents();
   }
@@ -13,6 +13,7 @@ export class Navigation {
   }
 
   nextSection() {
+    console.log("klik");
     this.#currentSection++;
     this.#sections.forEach((section) => {
       section.classList.remove("form__section--active");
@@ -22,5 +23,7 @@ export class Navigation {
     });
     this.#sections[this.#currentSection].classList.add("form__section--active");
     this.#navBars[this.#currentSection].classList.add("positionBar__item--green");
+
+    console.log(this.#currentSection);
   }
 }
