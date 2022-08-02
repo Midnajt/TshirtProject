@@ -1,6 +1,9 @@
+import { Navigation } from "./Navigation.js";
+
 export class FormHandler {
   #formBtn = document.querySelector("#formValideateBtn");
   #form = document.querySelector("#post");
+  #navigation = new Navigation();
 
   init() {
     this.#form.addEventListener("submit", (event) => this.formHandler(event));
@@ -32,5 +35,7 @@ export class FormHandler {
       // console.log(key);
       // console.log(value);
     }
+
+    this.#navigation.nextSection();
   }
 }
