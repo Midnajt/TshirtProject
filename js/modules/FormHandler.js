@@ -3,7 +3,7 @@ import { Navigation } from "./Navigation.js";
 export class FormHandler {
   #formBtn = document.querySelector("#formValideateBtn");
   #form = document.querySelector("#post");
-  #navigation = new Navigation();
+  #navigation = new Navigation(1);
 
   init() {
     this.#form.addEventListener("submit", (event) => this.formHandler(event));
@@ -36,6 +36,6 @@ export class FormHandler {
       // console.log(value);
     }
 
-    this.#navigation.nextSection();
+    this.#navigation.nextSection(1);
   }
 }

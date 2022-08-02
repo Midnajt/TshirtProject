@@ -3,8 +3,10 @@ import { Navigation } from "./modules/Navigation.js";
 import { ImgChanger } from "./modules/ImgChanger.js";
 import { EventsHandler } from "./modules/EventsHandler.js";
 
+const STARTING_SECTION = 0;
+
 class Controller {
-  #navigation = new Navigation();
+  #navigation = new Navigation(STARTING_SECTION);
   #formHandler = new FormHandler();
   #imgChanger = new ImgChanger();
   #eventsHandler = new EventsHandler();

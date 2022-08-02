@@ -4,6 +4,10 @@ export class Navigation {
   #sections = [...document.querySelectorAll("[data-section]")];
   #navBars = [...document.querySelectorAll(".positionBar__item")];
 
+  constructor(value) {
+    this.#currentSection = value;
+  }
+
   init() {
     this.addEvents();
   }
