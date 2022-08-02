@@ -9,7 +9,7 @@ export class EventsHandler {
   }
 
   changeSide(event) {
-    const imgMiniature = document.querySelector(".imgMiniature");
+    const imgMiniatures = [...document.querySelectorAll(".imgMiniature")];
     const tshirtSides = [document.querySelector("[data-img-front]"), document.querySelector("[data-img-rear]")];
     const side = event.target.value;
     const chosenSide = document.querySelector(`[data-img-${side}]`);
@@ -17,10 +17,8 @@ export class EventsHandler {
     tshirtSides.forEach((img) => img.classList.remove("tshirtImg--chosen"));
     chosenSide.classList.add("tshirtImg--chosen");
 
-    if (side === "rear") {
-      imgMiniature.classList.add("imgMiniature--right");
-    } else {
-      imgMiniature.classList.remove("imgMiniature--right");
-    }
+    imgMiniatures.forEach((img) => img.classList.remove("imgMiniature--show"));
+    const minitaure = chosenSide.querySelector(".imgMiniature");
+    minitaure.classList.add("imgMiniature--show");
   }
 }

@@ -160,7 +160,17 @@ table {
 }
 
 .tshirtImg {
+  position: relative;
+  width: 230px;
+  height: 255px;
   border-radius: 4px;
+  background-image: url(../assets/tshirt_front.jpg);
+  background-repeat: no-repeat;
+  border: 2px solid transparent;
+}
+
+.tshirtImg:last-child {
+  background-image: url(../assets/tshirt_rear.jpg);
 }
 
 .tshirtImg--chosen {
@@ -168,15 +178,18 @@ table {
 }
 
 .imgMiniature {
+  display: none;
   position: absolute;
-  top: 50px;
-  left: 165px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-60%, -100%);
+          transform: translate(-60%, -100%);
   width: 70px;
   height: 70px;
 }
 
-.imgMiniature--right {
-  left: 405px;
+.imgMiniature--show {
+  display: block;
 }
 
 .wrapper {
