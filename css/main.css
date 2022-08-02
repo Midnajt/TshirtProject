@@ -192,6 +192,46 @@ table {
   display: block;
 }
 
+.label--hide {
+  display: none;
+}
+
+.input {
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  overflow: visible;
+}
+
+.input--short {
+  width: 3rem;
+}
+
+.input:focus {
+  color: #495057;
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.adrress .form__title {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.adrress .form__items {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .wrapper {
   margin: 1rem;
   padding: 1rem;

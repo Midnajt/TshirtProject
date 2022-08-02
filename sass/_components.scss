@@ -29,3 +29,39 @@
         display: block;
     }
 }
+
+.label {
+    &--hide {
+        display: none;
+    }
+}
+
+.input {
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: $inpnutTxtColor;
+    border: 1px solid $inputBorder;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    overflow: visible;
+
+    &--short {
+        width: 3rem;
+    }
+
+    &:focus {
+    color: $inputFocusTxtColor;
+    border-color: $inputFocusBorder;
+    outline: 0;
+    box-shadow: $inputBoxShadow;
+    }
+}
+
+.adrress {
+    .form__title {
+        flex-basis: 40%;
+    }
+    .form__items {
+        justify-content: flex-start;
+    }
+}
