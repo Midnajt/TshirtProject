@@ -1,0 +1,19 @@
+.tshirtImg {
+    border-radius: $border-radius;
+
+    &--chosen {
+        border: 2px solid $green;
+    }
+}
+
+.imgMiniature {
+    position: absolute;
+    top: 50px;
+    left: 165px;
+    width: 70px;
+    height: 70px;
+
+    &--right {
+        left: 405px;
+    }
+}
