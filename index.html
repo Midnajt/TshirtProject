@@ -105,16 +105,39 @@
                 </div>
                 <button id="nextSectionBtn" type="submit" data-confirm-data class="btn btn--next">Złóż
                     zamówienie</button>
-                <!-- działa po drugim kliknięciu ponieważ Navigation jest drugi raz inicjowane -->
             </section>
-
             <section class="form__section" data-section="2">
-                Potwierdzenie zamowienia
+                <div class="form__row">
+                    <p class="form__title form__title--max">Podsumowanie</p>
+                </div>
+                <div class="form__row form__row">
+                    <p class="form__title">Dane do rachunku:</p>
+                    <div class="form__items form__items--column">
+                        <p class="form__orderData" data-order-data="name"></p>
+                        <p class="form__orderData" data-order-data="city"></p>
+                        <p class="form__orderData" data-order-data="street"></p>
+                        <p class="form__orderData" data-order-data="phone"></p>
+                        <p class="form__orderData" data-order-data="email"></p>
+                    </div>
+                    <div class="tshirtImg" data-order-img-front>
+                        <img src="" alt="loremPicsumImg" class="imgMiniature imgMiniature--show opacity">
+                    </div>
+                    <div class="tshirtImg" data-order-img-rear>
+                        <img src="" alt="loremPicsumImg" class="imgMiniature imgMiniature--show opacity">
+                    </div>
+                </div>
+                <button id="nextSectionBtn" type="submit" data-confirm-data class="btn btn--next">Złóż
+                    zamówienie</button>
+            </section>
+            <section class="form__section form__section--last-section" data-section="3">
+                <div class="form__row">
+                    <p class="form__title form__title--max">Dziękujemy za złożenie zamówienia</p>
+                </div>
+                <div class="logoContainer">
+                    <img class="logoContainer__img" src="./assets/logo.jpg" alt="logo">
+                </div>
             </section>
         </form>
-        <div class="logoContainer">
-            <img class="logoContainer__img" src="./assets/logo.jpg" alt="logo">
-        </div>
     </div>
     <script src="./js/Controller.js" type="module"></script>
 </body>

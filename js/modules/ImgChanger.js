@@ -33,9 +33,10 @@ export class ImgChanger {
   }
 
   setImgSrc(imgSrc) {
-    const imgs = [document.querySelector("[data-shirt-img]"), ...document.querySelectorAll(".imgMiniature")];
+    const imgs = [document.querySelector("[data-shirt-img]"), ...document.querySelectorAll(".imgMiniature"), ...document.querySelectorAll(".img--order-data")];
     imgs.forEach((img) => {
       img.src = imgSrc;
+      this.saveLocalImg(imgSrc);
       setTimeout(() => {
         img.classList.add("opacity--one");
       }, 300);
@@ -77,5 +78,9 @@ export class ImgChanger {
     const dataURL = canvas.toDataURL("image/png");
 
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+  }
+
+  saveLocalImg(img) {
+    localStorage.setItem("chosenImg", JSON.stringify(img));
   }
 }

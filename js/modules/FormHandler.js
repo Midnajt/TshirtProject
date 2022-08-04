@@ -1,9 +1,7 @@
 import { Navigation } from "./Navigation.js";
 
 export class FormHandler {
-  #formBtn = document.querySelector("#formValideateBtn");
   #form = document.querySelector("#post");
-  #navigation = new Navigation(1);
 
   init() {
     this.#form.addEventListener("submit", (event) => this.formHandler(event));
@@ -11,31 +9,70 @@ export class FormHandler {
 
   formHandler(e) {
     e.preventDefault();
-    console.log("formHandler(e)");
-    // ? https://gomakethings.com/working-with-forms-with-vanilla-javascript/
-    // ? http://kursjs.pl/kurs/formularze/formularze-walidacja
-    // let form = document.querySelector("#post");
 
-    // form.addEventListener("submit", (e) => {
-    //   e.preventDefault();
-    // });
-
-    // Get all field data from the form
-    // returns a FormData object
     let data = new FormData(this.#form);
 
-    // console.log(data);
-    // console.log(data.keys);
-
-    // for (let entry of data) {
-    //   console.log(entry);
-    // }
-
     for (let [key, value] of data) {
-      // console.log(key);
-      // console.log(value);
+      switch (key) {
+        case "name":
+          this.insertValue("name", value);
+          break;
+        case "lastName":
+          this.insertValue("name", value);
+          break;
+        case "street":
+          this.insertValue("street", value);
+          break;
+        case "streetNumber":
+          this.insertValue("street", value);
+          break;
+        case "homeNumber":
+          this.insertValue("street", `/${value}`);
+          break;
+        case "zipCode":
+          this.insertValue("city", `${value}`);
+          break;
+        case "city":
+          this.insertValue("city", `${value}`);
+          break;
+        case "phone":
+          this.insertValue("phone", `${value}`);
+          break;
+        case "email":
+          this.insertValue("email", `${value}`);
+          break;
+        default:
+          // console.log("default");
+          break;
+      }
     }
 
-    this.#navigation.nextSection(1);
+    const section = this.checkCurrentSection();
+    const navigation = new Navigation();
+
+    switch (section) {
+      case "1":
+        navigation.addSection(1);
+        navigation.nextSection();
+        break;
+      case "2":
+        navigation.addSection(2);
+        navigation.nextSection();
+        this.sendOrder(data);
+        break;
+    }
+  }
+
+  insertValue(item, value) {
+    document.querySelector(`[data-order-data="${item}"]`).innerHTML += `${value} `;
+  }
+
+  checkCurrentSection() {
+    return document.querySelector(".form__section--active").dataset.section;
+  }
+
+  sendOrder(data) {
+    const img = JSON.parse(window.localStorage.getItem("chosenImg"));
+    // send(data,img)
   }
 }

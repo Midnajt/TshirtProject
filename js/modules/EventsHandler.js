@@ -1,6 +1,9 @@
+const STARTING_SIDE = "front";
+
 export class EventsHandler {
   init() {
     this.inputsAddEvents();
+    this.changeSideOrderData(STARTING_SIDE);
   }
 
   inputsAddEvents() {
@@ -20,5 +23,17 @@ export class EventsHandler {
     imgMiniatures.forEach((img) => img.classList.remove("imgMiniature--show"));
     const minitaure = chosenSide.querySelector(".imgMiniature");
     minitaure.classList.add("imgMiniature--show");
+
+    this.changeSideOrderData(side);
+  }
+
+  changeSideOrderData(side) {
+    const orderDataImg = [document.querySelector("[data-order-img-front]"), document.querySelector("[data-order-img-rear]")];
+    orderDataImg.forEach((img) => (img.style.display = "none"));
+    document.querySelector(`[data-order-img-${side}]`).style.display = "block";
+
+    const orderDataMiniImg = [document.querySelector("[data-order-img-front] .imgMiniature"), document.querySelector("[data-order-img-rear] .imgMiniature")];
+    orderDataMiniImg.forEach((img) => img.classList.remove("imgMiniature--show"));
+    document.querySelector(`[data-order-img-${side}] .imgMiniature`).classList.add("imgMiniature--show");
   }
 }
