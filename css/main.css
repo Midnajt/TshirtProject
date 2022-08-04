@@ -256,6 +256,10 @@ table {
   opacity: 1;
 }
 
+.img {
+  height: 200px;
+}
+
 .wrapper {
   position: relative;
   margin: 1rem;

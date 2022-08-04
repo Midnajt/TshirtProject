@@ -47,12 +47,10 @@ export class ImgChanger {
   }
 
   changeImg(e) {
-    const img = document.querySelector("[data-shirt-img]");
     if (e.target.dataset.btnValue === "previous") {
       e.target.classList.add("btn--inactive");
 
       if (!this.#scrollBack) {
-        console.log("!previous");
         return;
       }
       this.setImgSrc(this.#lastImg);
@@ -62,7 +60,7 @@ export class ImgChanger {
       this.#btnPrevious.classList.remove("btn--inactive");
 
       this.#lastImg = this.#currentImg;
-      this.setImgSrc(URL);
+      this.saveImg(URL);
 
       this.#scrollBack = true;
     }
