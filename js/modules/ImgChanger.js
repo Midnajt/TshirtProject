@@ -2,7 +2,7 @@ export class ImgChanger {
   #btnNext = document.querySelector('[data-btn-value="next"]');
   #btnPrevious = document.querySelector('[data-btn-value="previous"]');
   #btns = [...document.querySelectorAll(".imgBtn")];
-  #scrollBack = true;
+  #scrollBack = false;
 
   init() {
     this.addEvents(this.#btns);

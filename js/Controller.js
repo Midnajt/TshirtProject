@@ -10,6 +10,7 @@ class Controller {
   #formHandler = new FormHandler();
   #imgChanger = new ImgChanger();
   #eventsHandler = new EventsHandler();
+
   constructor() {
     this.#formHandler.init();
     this.#navigation.init();
