@@ -246,6 +246,16 @@ table {
   width: 200px;
 }
 
+.opacity {
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.opacity--one {
+  opacity: 1;
+}
+
 .wrapper {
   position: relative;
   margin: 1rem;

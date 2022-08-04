@@ -75,3 +75,12 @@
         width: 200px;
     }
 }
+
+.opacity {
+    opacity: 0;
+    transition: .3s;
+
+    &--one {
+        opacity:1;
+    }
+}

@@ -1,11 +1,45 @@
+const URL = "https://picsum.photos/200";
+
 export class ImgChanger {
-  #btnNext = document.querySelector('[data-btn-value="next"]');
   #btnPrevious = document.querySelector('[data-btn-value="previous"]');
   #btns = [...document.querySelectorAll(".imgBtn")];
   #scrollBack = false;
+  #currentImg = null;
+  #lastImg = null;
 
   init() {
+    this.saveImg(URL);
     this.addEvents(this.#btns);
+  }
+
+  saveImg(url) {
+    const getBase64FromUrl = async (url) => {
+      const data = await fetch(url);
+      const blob = await data.blob();
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(blob);
+        reader.onloadend = () => {
+          const base64data = reader.result;
+          resolve(base64data);
+        };
+      });
+    };
+
+    getBase64FromUrl(url).then((data) => {
+      this.#currentImg = data;
+      this.setImgSrc(this.#currentImg);
+    });
+  }
+
+  setImgSrc(imgSrc) {
+    const imgs = [document.querySelector("[data-shirt-img]"), ...document.querySelectorAll(".imgMiniature")];
+    imgs.forEach((img) => {
+      img.src = imgSrc;
+      setTimeout(() => {
+        img.classList.add("opacity--one");
+      }, 300);
+    });
   }
 
   addEvents(btns) {
@@ -21,20 +55,16 @@ export class ImgChanger {
         console.log("!previous");
         return;
       }
-      const dataImage = localStorage.getItem("imgData"); // nie działa, broken state
-      img.src = "data:image/png;base64," + dataImage; // nie działa, broken state
+      this.setImgSrc(this.#lastImg);
 
       this.#scrollBack = !this.#scrollBack;
-      console.log("previous");
     } else {
       this.#btnPrevious.classList.remove("btn--inactive");
 
-      const imgData = this.getBase64Image(img);
-      this.getBase64Image(img);
-      localStorage.setItem("currentImgSrc", imgData);
-      img.src = "https://picsum.photos/200"; // zmiana zdjęć nie działa
+      this.#lastImg = this.#currentImg;
+      this.setImgSrc(URL);
+
       this.#scrollBack = true;
-      console.log("next");
     }
   }
 
