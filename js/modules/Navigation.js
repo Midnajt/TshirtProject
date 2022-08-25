@@ -13,9 +13,7 @@ export class Navigation {
   }
 
   nextSection() {
-    console.log("klik");
     this.#currentSection++;
-    console.log(this.#currentSection);
     if (this.#currentSection === 4) return;
 
     this.#sections.forEach((section) => {

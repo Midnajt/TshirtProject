@@ -42,7 +42,6 @@ export class FormHandler {
           this.insertValue("email", `${value}`);
           break;
         default:
-          // console.log("default");
           break;
       }
     }
